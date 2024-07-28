@@ -1,0 +1,42 @@
+{
+  "auth": {
+    "clientId": "RubicamWebAppl1234567",
+    "command": 1,
+    "data": "{\"topics\":[\"events/syslog\",\"device/info\",\"device/video_caps\",\"users/list\",\"settings/audio/get\",\"settings/audiortsp/get\",\"settings/video/get\",\"settings/lens/get\",\"settings/lens/current\",\"settings/autofocus/get\",\"settings/common/get\",\"updater/camera/chunk/response\",\"updater/camera/check/result\",\"updater/camera/download/progress\",\"updater/camera/download/status\",\"settings/iot/get\",\"settings/osd/get\",\"settings/lan/get\",\"route/list\",\"route/list/changed\",\"vlan/list\",\"vlan/list/changed\",\"vlan/interfaces/list\",\"logs/message\",\"settings/backup/get\",\"settings/objectdetection/get\",\"settings/ai/get\",\"settings/security/get\",\"device/backup/get\",\"https/certs/status\",\"iot/certs/status\",\"tools/ping/response\",\"tools/ping/response\",\"settings/time/get\",\"webrtc/sdp/set\",\"webrtc/pong\",\"webrtc/archive_notification\",\"settings/webrtc/get\",\"events/db/list\",\"device/mmc/status\",\"device/mmc/eject/result\",\"device/mmc/format/result\",\"settings/storage/get\",\"device/list_updated\",\"controls/infrared\",\"settings/motion_detection/get\",\"cars/db/list\",\"cars/db/set/result\",\"cars/db/remove/result\",\"cars/db/clear/result\",\"cars/db/export_csv/result\",\"cars/db/import_csv/result\",\"cars/passages/list\",\"cars/passages/export_csv/result\",\"settings/control_io/get\",\"settings/control_io/device_valid_mask\",\"control_io/cam_connection_test/result\",\"control_io/racs_connection_test/result\",\"storage/actions/calendar\",\"storage/actions/intervals\"],\"credentials\":\"YWRtaW46YWRtaW4=\"}"
+  },
+  "exit": {
+    "clientId": "RubicamWebAppl1234567",
+    "command": 2,
+    "data": ""
+  },
+  "ntp": {
+    "clientId": "RubicamWebAppl1234567",
+    "command": 3,
+    "data": "{\"topic\":\"settings/time/set\",\"payload\":\"eyJkYXlTdGFydCI6MjcwMDAsIm5pZ2h0U3RhcnQiOjc3NDAwLCJ0aW1lem9uZSI6MTA4MDAsIm50cFBvb2wiOiIxOTIuMTY4LjEuMToxMjMiLCJjdXN0b21EYXRlVGltZUVuYWJsZWQiOmZhbHNlLCJpb3RUaW1lU3luY0VuYWJsZWQiOmZhbHNlfQ==\",\"qos\":1,\"retain\":false,\"raw\":false,\"id\":15}"
+  },
+  "cameraId": {
+    "clientId": "RubicamWebAppl1234567",
+    "command": 3,
+    "data": "{\"topic\":\"settings/osd/set\",\"payload\":\"eyJzaG93RGF0ZVRpbWUiOnRydWUsInNob3dOYW1lIjp0cnVlLCJuYW1lIjoiMjM0ODA0IiwiZGF0ZUZvcm1hdCI6MCwidXNlMjRoQ2xvY2siOnRydWUsIndlZWtkYXlzIjp0cnVlfQ==\",\"qos\":1,\"retain\":false,\"raw\":false,\"id\":366}"
+  },
+  "userRtsp": {
+    "clientId": "RubicamWebAppl1234567",
+    "command": 3,
+    "data": "{\"topic\":\"users/add\",\"payload\":\"eyJuYW1lIjoibmFtZSIsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJyb2xlIjozMH0=\",\"qos\":1,\"retain\":false,\"raw\":false,\"id\":3}"
+  },
+  "deleteUserRtsp": {
+    "clientId": "RubicamWebAppl1234567",
+    "command": 3,
+    "data": "{\"topic\":\"users/delete\",\"payload\":\"eyJvbGRfbmFtZSI6InZpZXcifQ==\",\"qos\":1,\"retain\":false,\"raw\":false,\"id\":3}"
+  },
+  "userAdmin": {
+    "clientId": "RubicamWebAppl1234567",
+    "command": 3,
+    "data": "{\"topic\":\"users/set/password\",\"payload\":\"eyJuYW1lIjoibmFtZSIsIm9sZF9wYXNzIjoib2xkX3Bhc3NuIiwibmV3X3Bhc3MiOiJuZXdfcGFzcyJ9\",\"qos\":1,\"retain\":false,\"raw\":false,\"id\":3}"
+  },
+  "check": {
+    "clientId": "RubicamWebAppl1234567",
+    "command": 4,
+    "data": ""
+  }
+}

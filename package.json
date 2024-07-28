@@ -1,0 +1,22 @@
+{
+  "name": "configurator_rubetek",
+  "version": "1.0.0",
+  "description": "Application for configuration Rubetek",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "configurator_rubetek"
+  },
+  "author": "gerasimovman",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "env": "^0.0.2",
+    "minimist": "^1.2.8"
+  }
+}
