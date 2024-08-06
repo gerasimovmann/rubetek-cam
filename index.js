@@ -6,7 +6,7 @@ import env from "dotenv"
 // EXAMPLE to run: node index.js --ip 172.31.0.241 --id 31321312
 
 // set up path to project in your system
-env.config({ path: "" })
+env.config({ path: "/Users/viktor/Documents/Documents/programming_JS/projects/configurator_rubetek/.env" })
 
 async function index() {
   const argv = minimist(process.argv.slice(2))
@@ -14,6 +14,8 @@ async function index() {
   const username = process.env.LGN ? process.env.LGN : ""
   const password = process.env.PSWD ? process.env.PSWD : ""
   const ntp = process.env.NTP ? process.env.NTP : ""
+  const rtsp_username = process.env.RTSP_LGN ? process.env.RTSP_LGN : "username"
+  const rtsp_password = process.env.RTSP_PSWD ? process.env.RTSP_PSWD : "password"
   let authCookie = ""
 
   if (!argv.ip) {
@@ -157,7 +159,15 @@ async function index() {
   }
 
   const setUserRTSP = async () => {
-    const data = await request("userRtsp")
+    const template = headers["userRtsp"]
+    const dataString = JSON.parse(template.data)
+    let decode = JSON.parse(decodeBase(dataString.payload))
+    decode.name = rtsp_username
+    decode.password = rtsp_password
+    dataString.payload = encodeBase(JSON.stringify(decode))
+    template.data = JSON.stringify(dataString)
+
+    const data = await request("userRtsp", template)
     if (!data.status) {
       console.log("Установить пользователя rtsp не удалось")
       return
@@ -184,6 +194,7 @@ async function index() {
     await currentFunc.func()
     if (currentFunc.reload) {
       await reConnect()
+      await check()
     }
   }
 }
