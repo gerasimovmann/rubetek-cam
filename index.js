@@ -109,7 +109,7 @@ async function index() {
   }
 
   const setNtp = async () => {
-    const template = headers["cameraId"]
+    const template = headers["ntp"]
     const dataString = JSON.parse(template.data)
     let decode = JSON.parse(decodeBase(dataString.payload))
     decode.ntpPool = ntp
